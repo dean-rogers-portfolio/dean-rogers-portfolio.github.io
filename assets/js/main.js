@@ -8,6 +8,18 @@
   "use strict";
 
   /**
+   * Update age in About section
+   */
+   window.addEventListener('load', () => {
+    var today = new Date();
+    var date = new Date(1996,9,27,0,0,0);
+    var difference = (today-date)/(1000*60*60*24*365);
+    var age = Math.trunc(difference);
+    document.getElementById("currAge").innerHTML = age;
+  });
+
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
